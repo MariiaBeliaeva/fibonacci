@@ -13,4 +13,14 @@ const fibonacciIter = (n) => {
 console.log(fibonacciIter(7));
 
 // Рекурсивное вычисление n-го числа Фибоначчи
-const fibonacciRec = () => {};
+const fibonacciRec = (n) => {
+  if (n <= 1) {
+    return n;
+  } else {
+    return fibonacciRec(n - 1) + fibonacciRec(n - 2);
+  }
+};
+
+console.log(fibonacciRec(6));
+
+module.exports = { fibonacciIter, fibonacciRec };
